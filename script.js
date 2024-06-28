@@ -150,6 +150,9 @@ function moveFocus(row, col) {
     if (col >= 9) {
         col = 0;
         row++;
+    } else if (col < 0) {
+        col = 8;
+        row--;
     }
     if (row >= 0 && row < 9 && col >= 0 && col < 9) {
         document.getElementById(`cell-${row}-${col}`).focus();
